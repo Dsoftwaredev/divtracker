@@ -9,6 +9,7 @@
     <script defer src="index.js"></script>
     <script defer src="createstock.js"></script>
     <script defer src="createuser.js"></script>
+    <script defer src="updatestock.js"></script>
 </head>
 <body>
 <h1>Dividend Tracker</h1>
@@ -45,6 +46,43 @@
 <div>
     <form id="user">
         <h1>Create User</h1>
+        <label for="uname">Username</label>
+        <input type="text" name="uname" id="uname">
+        <label for="balance">Balance</label>
+        <input type="number" name="balance" id="balance">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <section class="usersubmission">
+            <input type="submit" value="submituser" id="submituser">
+        </section>
+
+    </form>
+</div>
+
+<div>
+    <form id="updateAStock">
+        <h1>Update a stock</h1>
+        <label for="id">ID</label>
+        <input type="number" name="id" id="id">
+        <label for="name">name</label>
+        <input type="text" name="name" id="Sname">
+        <label for="quantity">quantity</label>
+        <input type="number" name="quantity" id="Squantity">
+        <label for="stockPrice">Stock Price</label>
+        <input type="number" name="stockPrice" id="SstockPrice">
+        <label for="divFrequency">Dividend Frequency</label>
+        <input type="number" name="divFrequency" id="SdivFrequency">
+        <label for="nextDividend">next Dividend Amount</label>
+        <input type="number" name="nextDividend" id="SnextDividend">
+        <section class="submission">
+        <input type="submit" value="updatestock" id="updatestock">
+        </section>
+    </form>
+</div>
+
+<div>
+    <form id="user">
+        <h1>Update User</h1>
         <label for="uname">Username</label>
         <input type="text" name="uname" id="uname">
         <label for="balance">Balance</label>
