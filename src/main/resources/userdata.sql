@@ -1,0 +1,1 @@
+INSERT INTO USERS (NAME, BALANCE, EMAIL) VALUES ('Daniel', 1000, 'danielw288@icloud.com');
