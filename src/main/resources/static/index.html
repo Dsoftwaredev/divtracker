@@ -7,6 +7,7 @@
     <title>Dividend tracker</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js"></script>
+    <script defer src="createstock.js"></script>
 </head>
 <body>
 <h1>Dividend Tracker</h1>
@@ -22,7 +23,7 @@
 </div>
 
 <div>
-    <form>
+    <form id="stock">
         <h1>Create a stock</h1>
         <label for="name">name</label>
         <input type="text" name="name" id="name">
@@ -34,6 +35,9 @@
         <input type="number" name="divFrequency" id="divFrequency">
         <label for="nextDividend">next Dividend Amount</label>
         <input type="number" name="nextDividend" id="nextDividend">
+        <section class="submission">
+            <input type="submit" value="submit" id="submit">
+        </section>
     </form>
 </div>
 

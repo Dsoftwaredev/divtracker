@@ -72,5 +72,3 @@ const displayStocks = (event) => {
 
 stocks.addEventListener('click', displayStocks);
 
-
-
