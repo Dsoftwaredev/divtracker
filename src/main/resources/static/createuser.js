@@ -1,7 +1,7 @@
-let createUserForm = document.getElementById('user')
+let createUserForm = document.querySelector("#submituser")
 let uname = document.getElementById('uname');
 let balance = document.getElementById('balance');
-let email = document.getElementById('Email');
+let email = document.getElementById('email');
 
 
 const postUser = (e) => {
@@ -19,7 +19,7 @@ const postUser = (e) => {
         }
     }).then(res => {
         res.json().then(body => {
-            console.log(uname.value)
+        
             document.body.innerHTML = JSON.stringify(body)
         })
     }).catch(err => {
@@ -28,10 +28,9 @@ const postUser = (e) => {
 }
         
  
-createUserForm.addEventListener("submituser", (e) => {
-     
-  console.log(e);
-  e.preventDefault();
+createUserForm.addEventListener('click', (e) => {
+e.preventDefault();
+console.log(e); 
 postUser(e);
 });
 
