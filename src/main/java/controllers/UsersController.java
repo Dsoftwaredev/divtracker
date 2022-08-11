@@ -3,6 +3,7 @@ package controllers;
 
 import entities.Stocks;
 import entities.Users;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
@@ -12,15 +13,18 @@ import repositories.UsersRepository;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+
 @RestController
 public class UsersController {
 
-    private final UsersRepository usersRepository;
 
-    public UsersController(UsersRepository usersRepository) {
+    private final UsersRepository usersRepository;
+    @Autowired
+    public UsersController( UsersRepository usersRepository) {
+        super();
         this.usersRepository = usersRepository;
     }
+
     @GetMapping("/users")
     public List<Users> getAllUsers() {
         return this.usersRepository.findAll();
@@ -33,7 +37,7 @@ public class UsersController {
     }
     @PostMapping("/users")
     public Users createNewUser(@RequestBody Users users) {
-        Users newUser = this.usersRepository.save(users);
+        Users newUser = usersRepository.save(users);
         return newUser;
     }
 

@@ -1,5 +1,7 @@
 package entities;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +13,6 @@ import javax.persistence.GenerationType;
 @Entity
 @Table(name="users")
 public class Users {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -24,6 +25,9 @@ public class Users {
 
     @Column(name = "EMAIL")
     private String Email;
+
+    public Users() {
+    }
 
     public Users(String name, Integer balance, String email) {
         this.name = name;
