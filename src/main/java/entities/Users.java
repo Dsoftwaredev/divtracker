@@ -25,6 +25,19 @@ public class Users {
     @Column(name = "EMAIL")
     private String Email;
 
+    public Users(String name, Integer balance, String email) {
+        this.name = name;
+        this.balance = balance;
+        Email = email;
+    }
+
+    public Users(Integer id, String name, Integer balance, String email) {
+        this.id = id;
+        this.name = name;
+        this.balance = balance;
+        Email = email;
+    }
+
     public Integer getId() {
         return id;
     }
