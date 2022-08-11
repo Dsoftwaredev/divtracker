@@ -10,6 +10,9 @@
     <script defer src="createstock.js"></script>
     <script defer src="createuser.js"></script>
     <script defer src="updatestock.js"></script>
+    <script defer src="updateuser.js"></script>
+    <script defer src="deletestock.js"></script>
+    <script defer src="deleteuser.js"></script>
 </head>
 <body>
 <h1>Dividend Tracker</h1>
@@ -81,18 +84,38 @@
 </div>
 
 <div>
-    <form id="user">
+    <form id="updateuser">
         <h1>Update User</h1>
-        <label for="uname">Username</label>
-        <input type="text" name="uname" id="uname">
-        <label for="balance">Balance</label>
-        <input type="number" name="balance" id="balance">
-        <label for="email">Email</label>
-        <input type="email" id="email">
+        <label for="updateId">ID</label>
+        <input type="number" name="updateId" id="updateId">
+        <label for="updateName">Username</label>
+        <input type="text" name="updateName" id="updateName">
+        <label for="updateBalance">Balance</label>
+        <input type="number" name="updateBalance" id="updateBalance">
+        <label for="updateEmail">Email</label>
+        <input type="email" id="updateEmail">
         <section class="usersubmission">
-            <input type="submit" value="submituser" id="submituser">
+            <input type="submit" value="submitUpdateuser" id="submitUpdateuser">
         </section>
 
+    </form>
+</div>
+
+<div>
+    <form id="deletestock">
+        <h1>Delete Stock</h1>
+        <label for="deleteStockID">Enter ID of stock to delete</label>
+        <input type="number" name="deleteStockID" id="deleteStockID">
+        <input type="submit" value="deleteS" id="deleteS">
+    </form>
+</div>
+
+<div>
+    <form id="deleteUser">
+        <h1>Delete User</h1>
+        <label for="deleteUserId">Enter ID of stock to delete</label>
+        <input type="number" name="deleteUserId" id="deleteUserId">
+        <input type="submit" value="deleteUsersubmit" id="deleteUsersubmit">
     </form>
 </div>
 

@@ -1,17 +1,18 @@
-let createUserForm = document.querySelector("#submituser")
-let uname = document.getElementById('uname');
-let balance = document.getElementById('balance');
-let email = document.getElementById('email');
+let updateUserForm = document.querySelector("#submitUpdateuser")
+let updateId = document.getElementById('updateId').value;
+let updateName = document.getElementById('updateName');
+let updateBalance = document.getElementById('updateBalance');
+let updateEmail = document.getElementById('updateEmail');
 
 
-const postUser = (e) => {
-    fetch('/users', {
-        method: "POST",
+const updateUser = (e) => {
+    fetch(`/users/${updateId}`, {
+        method: "PUT",
         body: JSON.stringify(
             {
-                "name": uname.value,
-                "balance": balance.value,
-                "email": email.value
+                "name": updateName.value,
+                "balance": updateBalance.value,
+                "email": updateEmail.value
                
         }),
         headers:{
@@ -28,8 +29,8 @@ const postUser = (e) => {
 }
         
  
-createUserForm.addEventListener('click', (e) => {
+updateUserForm.addEventListener('click', (e) => {
 e.preventDefault();
 console.log(e); 
-postUser(e);
+updateUser(e);
 });
