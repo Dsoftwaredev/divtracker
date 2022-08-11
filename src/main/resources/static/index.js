@@ -1,13 +1,13 @@
 const responseField = document.querySelector('#responseField');
-const submit = document.querySelector('#submit');
+const submit = document.querySelector('#users');
 const stocks = document.querySelector('#stocks')
 
 const getUsers = () => {
   fetch('/users').then(response => {
 console.log('test2')
       response.json().then(jsonResponse => {
-                            //   renderRawResponse(jsonResponse);
-                               renderResponse(jsonResponse);
+                               renderRawResponse(jsonResponse);
+                            //   renderResponse(jsonResponse);
                               })
 
   }).catch( networkError => {
@@ -71,6 +71,4 @@ const displayStocks = (event) => {
 };
 
 stocks.addEventListener('click', displayStocks);
-
-
 
