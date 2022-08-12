@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dividend tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <script defer src="createstock.js"></script>
+    <script defer src="createuser.js"></script>
+    <script defer src="updatestock.js"></script>
+    <script defer src="updateuser.js"></script>
+    <script defer src="deletestock.js"></script>
+    <script defer src="deleteuser.js"></script>
+</head>
+<body>
+<h1>Dividend Tracker</h1>
+    <table>
+        <tr><td><button id="users">GetUsers</button></td></tr>
+        <tr><td><button id="stocks">GetStocks</button></td></tr>
+    </table>
+
+
+<p>Read</p>
+<div id="responseField">
+
+</div>
+
+<div>
+    <form id="stock">
+        <h1>Create a stock</h1>
+        <label for="name">name</label>
+        <input type="text" name="name" id="name">
+        <label for="quantity">quantity</label>
+        <input type="number" name="quantity" id="quantity">
+        <label for="stockPrice">Stock Price</label>
+        <input type="number" name="stockPrice" id="stockPrice">
+        <label for="divFrequency">Dividend Frequency</label>
+        <input type="number" name="divFrequency" id="divFrequency">
+        <label for="nextDividend">next Dividend Amount</label>
+        <input type="number" name="nextDividend" id="nextDividend">
+        <section class="submission">
+        <input type="submit" value="submit" id="submit">
+        </section>
+    </form>
+</div>
+
+<div>
+    <form id="user">
+        <h1>Create User</h1>
+        <label for="uname">Username</label>
+        <input type="text" name="uname" id="uname">
+        <label for="balance">Balance</label>
+        <input type="number" name="balance" id="balance">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <section class="usersubmission">
+            <input type="submit" value="submituser" id="submituser">
+        </section>
+
+    </form>
+</div>
+
+<div>
+    <form id="updateAStock">
+        <h1>Update a stock</h1>
+        <label for="id">ID</label>
+        <input type="number" name="id" id="id">
+        <label for="name">name</label>
+        <input type="text" name="name" id="Sname">
+        <label for="quantity">quantity</label>
+        <input type="number" name="quantity" id="Squantity">
+        <label for="stockPrice">Stock Price</label>
+        <input type="number" name="stockPrice" id="SstockPrice">
+        <label for="divFrequency">Dividend Frequency</label>
+        <input type="number" name="divFrequency" id="SdivFrequency">
+        <label for="nextDividend">next Dividend Amount</label>
+        <input type="number" name="nextDividend" id="SnextDividend">
+        <section class="submission">
+        <input type="submit" value="updatestock" id="updatestock">
+        </section>
+    </form>
+</div>
+
+<div>
+    <form id="updateuser">
+        <h1>Update User</h1>
+        <label for="updateId">ID</label>
+        <input type="number" name="updateId" id="updateId">
+        <label for="updateName">Username</label>
+        <input type="text" name="updateName" id="updateName">
+        <label for="updateBalance">Balance</label>
+        <input type="number" name="updateBalance" id="updateBalance">
+        <label for="updateEmail">Email</label>
+        <input type="email" id="updateEmail">
+        <section class="usersubmission">
+            <input type="submit" value="submitUpdateuser" id="submitUpdateuser">
+        </section>
+
+    </form>
+</div>
+
+<div>
+    <form id="deletestock">
+        <h1>Delete Stock</h1>
+        <label for="deleteStockID">Enter ID of stock to delete</label>
+        <input type="number" name="deleteStockID" id="deleteStockID">
+        <input type="submit" value="deleteS" id="deleteS">
+    </form>
+</div>
+
+<div>
+    <form id="deleteUser">
+        <h1>Delete User</h1>
+        <label for="deleteUserId">Enter ID of stock to delete</label>
+        <input type="number" name="deleteUserId" id="deleteUserId">
+        <input type="submit" value="deleteUsersubmit" id="deleteUsersubmit">
+    </form>
+</div>
+
+</body>
+</html>

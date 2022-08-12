@@ -12,6 +12,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories("repositories")
 @EntityScan("entities")
 
+
+
 public class DividendTrackerApplication {
 
 	public static void main(String[] args) {
